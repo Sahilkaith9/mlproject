@@ -9,7 +9,7 @@ from sklearn.preprocessing import OneHotEncoder,StandardScaler
 from sklearn.pipeline import Pipeline
 import pandas as pd
 import numpy as np
-from src.utils import load_obj
+from src.utils import save_object
 
 @dataclass
 class DataTransformationConfig:
@@ -77,7 +77,7 @@ class DataTransformation:
             input_feature_train_df=preprocessor_obj.fit_transform(input_feature_train_df)
             input_feature_test_df=preprocessor_obj.transform(input_feature_test_df)
 
-            load_obj(
+            save_object(
                 file_path=self.data_transformation_config.preprocessor_path,
                 obj=preprocessor_obj
             )
