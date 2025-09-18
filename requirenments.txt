@@ -4,5 +4,6 @@ seaborn
 scikit-learn
 ipykernel
 xgboost
+flask
 
 -e .
